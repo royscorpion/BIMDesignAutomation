@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>  <!--Файл манифеста для Revit-->
+<RevitAddIns> <!--список всех команд-->
+	<AddIn Type="Application"> <!--указание, что это приложение-->
+		<Name>BIM Design Automation</Name>
+		<Assembly>"C:\ProgramData\Autodesk\Revit\Addins\2022\BIMDesignAutomation\BIMDesignAutomation.dll"</Assembly> <!--путь к приложению-->
+		<AddInId>E310CF74-192B-4A0C-BE75-70B29FCD1FA2</AddInId> <!--Уникальный GUID приложения. Необходимо сгенерировать новый GUID с помощью приложения (например, VisualStudio)-->
+		<FullClassName>BIMDesignAutomation.Main</FullClassName> <!--Пространство имен и класс, с которого будет запускаться приложение-->
+		<VendorId>ADSK</VendorId> <!--ID разработчика в Autodesk. Можно зарегистрироваться и указать свой, либо использовать универсальный ADSK (Autodesk)-->
+	</AddIn>
+</RevitAddIns>

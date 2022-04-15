@@ -1,0 +1,33 @@
+﻿<Window x:Class="CreateRoomsWithTags.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CreateRoomsWithTags"
+             mc:Ignorable="d" 
+             Height="300" Width="400"
+             Title="Создание помещений">
+    <StackPanel>
+        <Label Content="Выберите марку помещения"
+               Margin="5"/>
+        <ComboBox ItemsSource="{Binding RoomTagTypes}"
+                  SelectedValue="{Binding SelectedTagType}"
+                  DisplayMemberPath="Name"
+                  Margin="5"/>
+        <Label Content="Выберите уровень"
+                   Margin="5"/>
+        <ComboBox ItemsSource="{Binding Levels}" 
+                  SelectedValue="{Binding SelectedLevel}"
+                  DisplayMemberPath="Name"
+                  Margin="5"/>
+        <Label Content="Выберите стадию"
+               Margin="5"/>
+        <ComboBox ItemsSource="{Binding Phases}"
+                  SelectedValue="{Binding SelectedPhase}"
+                  DisplayMemberPath="Name"
+                  Margin="5"/>
+        <Button Content="Создать"
+                Command="{Binding SaveCommand}"
+                Margin="5"/>
+    </StackPanel>
+</Window>
